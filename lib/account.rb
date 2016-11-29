@@ -20,8 +20,8 @@ class Account
   end
 
   def print_balance
+    puts "Transactions".center(50)
     @transactions.each do |hash|
-      puts "Transactions".center(50)
       puts "-----------------".center(50)
         hash.each do |k, v|
         puts "#{k}: #{v}".center(50)
