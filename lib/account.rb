@@ -21,8 +21,10 @@ class Account
 
   def print_balance
     @transactions.each do |hash|
-      hash.each do |date, cred, deb, bal|
-        puts "Date: #{date}, #{cred}, #{deb}, #{bal}"
+      puts "Transactions".center(50)
+      puts "-----------------".center(50)
+        hash.each do |k, v|
+        puts "#{k}: #{v}".center(50)
       end
     end
   end

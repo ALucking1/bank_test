@@ -55,8 +55,11 @@ describe Account do
     it 'prints the statement when called' do
       account = Account.new
       account.deposit(50, "29/11/2016")
-      account.print_balance
-      expect(account.print_balance).to eq("Date: 29/11/2016, Credit: £50, Debit: , Balance: £50")
+      expect(account.print_balance).to eq(
+      "date: 29/11/2016
+      deposit: 50
+      withdrawal: 0
+      balance: 50")
     end
   end
 end
